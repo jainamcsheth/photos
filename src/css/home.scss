@@ -1,0 +1,25 @@
+.home-main {
+  background-color: #f7f5f5;
+  height: 100%;
+
+  .home-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .search-tags-main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-tags-btn {
+    width: 100px;
+    margin: 10px 20px;
+  }
+
+  .search-input-main {
+    padding: 40px 0 20px 0;
+  }
+}

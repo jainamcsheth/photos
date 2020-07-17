@@ -1,0 +1,44 @@
+$mobile-potrait-max-width: 567.98px;
+$mobile-landscape-max-height: 567.95px;
+$large-device-min-width: 568px;
+$medium-device-max-width: 991.98px;
+
+// Experimental - samll devices only but not mobile...
+$small-device-max-width: 830px;
+$small-device-min-width: 568px;
+
+
+// All mobile potrait
+@mixin mobile-potrait {
+  @media (max-width: $mobile-potrait-max-width) {
+    @content;
+  }
+}
+
+// Mobile landscape
+@mixin mobile-landscape {
+  @media (orientation: landscape) and (max-height: $mobile-landscape-max-height) {
+    @content;
+  }
+}
+
+// Large devices (i.e !mobile) plus Mobile landscape
+@mixin large-devices-and-mobile-landscape {
+  @media (min-width: $large-device-min-width) {
+    @content;
+  }
+}
+
+// Medium devices and below
+@mixin medium-devices {
+  @media (max-width: $medium-device-max-width) {
+    @content;
+  }
+}
+
+// Experimental - samll devices only but not mobile...Covers mobile landscape also
+@mixin small-devices {
+  @media (min-width: $small-device-min-width) and (max-width: $small-device-max-width) {
+    @content;
+  }
+}

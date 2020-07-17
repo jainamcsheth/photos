@@ -1,0 +1,36 @@
+@import './media-queries.scss';
+
+.photo-grid-main {
+  .photo-card-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .photo-card {
+    height: 200px;
+    width: 23% !important;
+    margin: 0 1% 20px;
+    object-fit: cover;
+  }
+
+  @include medium-devices {
+    .photo-card {
+      width: 30% !important;
+      margin: 0 1.66% 20px;
+    }
+  }
+
+  @include small-devices {
+    .photo-card {
+      width: 46% !important;
+      margin: 0 2% 20px;
+    }
+  }
+
+  @include mobile-potrait {
+    .photo-card {
+      width: 90% !important;
+      margin: 0 5% 20px;
+    }
+  }
+}
