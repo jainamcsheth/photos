@@ -5,7 +5,7 @@ import '../css/home.scss';
 import Search from './Search';
 import PhotosGrid from './PhotosGrid';
 
-export const Home = () => {
+const Home = () => {
 
   const [searchState, setSearchState] = useState('Mountain');
   const searchTag = searchState.toLowerCase();
