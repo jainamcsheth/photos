@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Search = ({ setSearchState, initialValue }) => {
+const Search = ({ setSearchState }) => {
 
   const input = useRef('hello');
 
@@ -10,10 +10,6 @@ const Search = ({ setSearchState, initialValue }) => {
     const searchText = input.current.value;
     setSearchState(searchText);
   }
-
-  useEffect(() => {
-    input.current.value = initialValue;
-  });
 
   return (
     <div style={styles.searchMain}>

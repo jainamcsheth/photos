@@ -3,12 +3,12 @@ import { Route, Redirect } from 'react-router-dom';
 
 import { isLoggedIn } from './util';
 
-const PrivateRoute = ({ component: Component, redirectTo, ...rest }) => {
+const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
     <Route {...rest} render={props => (
       isLoggedIn() ?
         <Component {...props} />
-        : <Redirect to={redirectTo} />
+        : <Redirect to="/" />
     )} />
   );
 };

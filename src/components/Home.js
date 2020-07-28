@@ -9,7 +9,6 @@ const Home = () => {
 
   const [searchState, setSearchState] = useState('Mountain');
   const searchTag = searchState.toLowerCase();
-  const initialSearchValue = '';
 
   const changeSearchState = (searchTxt) => {
     setSearchState(searchTxt);
@@ -19,7 +18,7 @@ const Home = () => {
     <div className="home-main">
       <div className="home-container">
         <div className="search-input-main">
-          <Search setSearchState={changeSearchState} initialValue={initialSearchValue} />
+          <Search setSearchState={changeSearchState} />
         </div>
         <div className="search-tags-main media-friendly-flex">
           {
